@@ -80,7 +80,7 @@ contract Auction {
         */
         
         // ** Start code here. 2 lines approximately. **/
-        if ((tokenDetails[msg.sender].remainingTokens < _count) || (tokenDetails[msg.sender].remainingTokens == 0)) revert();
+        if ((tokenDetails[msg.sender].remainingTokens < _count) || (tokenDetails[msg.sender].remainingTokens <= 0)) revert();
         if (_itemId > 2) revert();
         //** End code here. **
         
